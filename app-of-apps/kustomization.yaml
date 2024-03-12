@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  rhtap/gitops: go-new-ns 
+  janus-idp.io/tekton: go-new-ns
+  backstage.io/kubernetes-id: go-new-ns
+  backstage.io/kubernetes-namespace: go-new-ns 
+  app.kubernetes.io/part-of: go-new-ns
+resources: 
+- application-dev.yaml 
+- application-stage.yaml 
+- application-prod.yaml  
